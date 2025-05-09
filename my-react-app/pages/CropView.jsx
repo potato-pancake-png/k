@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CropView.css";
 import Nav from "../components/nav";
@@ -8,6 +8,7 @@ import Locations from "../config/location";
 
 const CropView = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [crop, setCrop] = useState(null);
   const [markets, setMarkets] = useState([]); // 추천 공판장 데이터 상태
 
@@ -153,6 +154,7 @@ const CropView = () => {
                           }
                         );
                         alert("선택이 완료되었습니다.");
+                        navigate(`/cropview/${id}`);
                       } catch (error) {
                         alert("선택에 실패했습니다.");
                       }
