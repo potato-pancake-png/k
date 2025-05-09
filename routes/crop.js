@@ -113,20 +113,25 @@ router.post("/add", async (req, res) => {
 
         // AI 모델 서버에 POST 요청 (예시 URL: http://localhost:5000/predict)
         const aiResponse = await axios.post(
-          "http://192.168.9.174:5000/predict",
+          "http://192.168.9.185:5000/predict",
           aiRequest
         );
+        console.log("AI 수신데이터:", aiResponse.data);
 
         const recommendList = aiResponse.data; // [{ Expected_Date, Market_name, Price }, ...]
         if (!Array.isArray(recommendList) || recommendList.length === 0) return;
 
         // recommend 테이블에 추천 결과 저장
         for (const rec of recommendList) {
-          const marketNameStr = getMarketByIndex(rec.Market_name) || "";
+          const dateObj = new Date(rec.date);
+          const formattedDate = dateObj.toISOString().slice(0, 10); // 'YYYY-MM-DD'
+
+          // 가격 변환: 소숫점 버리고 정수로
+          const priceInt = Math.floor(rec.net_rev);
           await db.query(
             `INSERT INTO recommend (crop_id, Expected_Date, Market_name, Price, address)
              VALUES (?, ?, ?, ?, ?)`,
-            [cropId, rec.Expected_Date, marketNameStr, rec.Price, rec.address]
+            [cropId, formattedDate, rec.Market_name, priceInt, rec.address]
           );
         }
 
@@ -134,12 +139,13 @@ router.post("/add", async (req, res) => {
         const best = recommendList.reduce((a, b) =>
           a.Price > b.Price ? a : b
         );
-        const bestMarketNameStr = getMarketByIndex(best.Market_name) || "";
 
+        console.log("가장 비싼 추천 결과:", best);
+        const bestDate = new Date(best.date).toISOString().slice(0, 10);
         // crops 테이블 업데이트
         await db.query(
           `UPDATE crops SET Expected_Harvest = ?, wholesale_market_name = ? WHERE id = ?`,
-          [best.Expected_Date, bestMarketNameStr, cropId]
+          [bestDate, best.Market_name, cropId]
         );
       } catch (err) {
         console.error("AI 서버 연동 또는 DB 저장 중 오류:", err.message);

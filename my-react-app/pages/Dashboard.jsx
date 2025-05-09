@@ -34,6 +34,7 @@ const Dashboard = () => {
           username: auth.user.username,
         });
 
+        console.log("Crops data:", response.data.crops);
         const formattedCrops = response.data.crops.map((crop) => {
           const addOneDay = (dateString) => {
             const date = new Date(dateString);

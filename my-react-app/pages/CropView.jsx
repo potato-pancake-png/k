@@ -50,7 +50,7 @@ const CropView = () => {
 
     fetchCropData();
     fetchMarketData();
-  }, [id, markets]);
+  }, [id]);
 
   if (!crop) {
     return <p>Loading...</p>;
