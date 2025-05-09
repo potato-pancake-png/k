@@ -140,7 +140,6 @@ router.post("/add", async (req, res) => {
           a.Price > b.Price ? a : b
         );
 
-        console.log("가장 비싼 추천 결과:", best);
         const bestDate = new Date(best.date).toISOString().slice(0, 10);
         // crops 테이블 업데이트
         await db.query(
