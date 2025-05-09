@@ -1,0 +1,166 @@
+.CropView-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9;
+}
+
+.CropView-main-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.CropView-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.CropView-crop-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.CropView-crop-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.CropView-crop-info li {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.CropView-crop-info li:last-child {
+  margin-bottom: 0;
+}
+
+.CropView-image-status-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CropView-crop-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.CropView-crop-status-active {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000;
+  background-color: #ffeb3b;
+  text-align: center;
+  margin-top: 10px;
+}
+.CropView-crop-status-done {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000;
+  background-color: #4caf50;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.CropView-market-recommendations {
+  margin-top: 40px;
+}
+
+.CropView-market-recommendations h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.CropView-market-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.CropView-market-card {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.CropView-market-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.CropView-market-card p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.CropView-market-card form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.CropView-market-card button[type="submit"] {
+  background-color: #b2ff59; /* 연두색 */
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.CropView-market-card button[type="submit"]:hover {
+  background-color: #76ff03;
+}
+
+.btn-match {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-match:hover {
+  background-color: #45a049;
+}
+
+.btn-edit {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-edit:hover {
+  background-color: #45a049;
+}

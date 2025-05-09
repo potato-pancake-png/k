@@ -1,0 +1,91 @@
+.homepage-container {
+  font-family: Arial, sans-serif;
+  background-color: #f8fff4;
+  padding: 0;
+  margin: 0;
+  padding-top: 550px; /* navbar 높이만큼 상단 여백 추가 */
+}
+.banner {
+  position: relative;
+  text-align: center;
+  color: #333;
+  padding: 20px 0;
+  width: 100%; /* 화면 전체 너비 */
+}
+
+.banner-content {
+  max-width: 1200px; /* 중앙 정렬을 위한 최대 너비 */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.banner-image {
+  width: 50%; /* 이미지 크기를 절반으로 줄임 */
+  height: auto; /* 비율을 유지 */
+  margin: 0 auto; /* 이미지 중앙 정렬 */
+  display: block; /* 블록 요소로 설정 */
+}
+
+.tagline {
+  display: inline-block;
+  background-color: #48bb78;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #2d3748;
+}
+
+.description {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #48bb78;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #38a169;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #48bb78;
+  border: 2px solid #48bb78;
+}
+
+.btn-secondary:hover {
+  background-color: #f0fff4;
+}
+
+.banner-image {
+  width: 100%; /* 화면 전체 너비 */
+  height: auto;
+  margin-top: 20px;
+  border-radius: 0; /* 둥근 모서리 제거 */
+}

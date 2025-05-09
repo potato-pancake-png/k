@@ -1,0 +1,99 @@
+.crop-card {
+  background-color: #f8fff4;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* 기존 400px에서 500px로 확장 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.crop-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.crop-type {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.crop-status {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.crop-status-active {
+  background-color: #f6e05e; /* 노란색 */
+  color: #2d3748; /* 텍스트 색상 */
+  border-radius: 15px; /* 둥근 모서리 */
+  padding: 5px 15px; /* 내부 여백 */
+}
+
+.crop-status-done {
+  background-color: #48bb78; /* 초록색 */
+  color: white; /* 텍스트 색상 */
+  border-radius: 15px; /* 둥근 모서리 */
+  padding: 5px 15px; /* 내부 여백 */
+}
+
+.crop-details p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 5px 0;
+}
+
+.crop-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.btn-edit:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-calendar {
+  background-color: white;
+  color: #48bb78;
+  border: 1px solid #48bb78;
+}
+
+.btn-calendar:hover {
+  background-color: #f0fff4;
+}
+
+.crop-icon {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.crop-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
